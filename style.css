@@ -15,6 +15,10 @@
   --body-color: hsl(0 0% 98%);
 }
 
+ul {
+  list-style: none;
+}
+
 body {
   font: 400 1rem "DM sans", sans-serif;
   color: var(--text-color);
@@ -22,7 +26,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+.title {
   font: 700 1.875rem "Poppins", sans-serif;
   color: var(--title-color);
   -webkit-font-smoothing: auto;
@@ -49,7 +53,7 @@ img {
 
 main {
   position: relative;
-  top: 4.5rem;
+  top: 6.5rem;
 }
 
 nav {
@@ -58,6 +62,33 @@ nav {
   height: 4.5rem;
   align-items: center;
   width: 100%;
+}
+
+nav .menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav.show .menu {
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav.show ul.grid {
+  gap: 4rem;
 }
 
 .container {
